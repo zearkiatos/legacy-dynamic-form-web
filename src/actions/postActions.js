@@ -4,7 +4,7 @@ import { POST_TYPES } from "../types";
 
 function fetchPost(id) {
   const request = axios.get(
-    `${config.REDUXBLOG_API_BASE_URL}/api/posts/${id}?key=${config.REDUXBLOG_API_KEY}`
+    `${config.REDUXBLOG_API_BASE_URL}api/posts/${id}?key=${config.REDUXBLOG_API_KEY}`
   );
 
   return {
@@ -15,7 +15,7 @@ function fetchPost(id) {
 
 function fetchPosts() {
   const request = axios.get(
-    `${config.REDUXBLOG_API_BASE_URL}/api/posts?key=${config.REDUXBLOG_API_KEY}`
+    `${config.REDUXBLOG_API_BASE_URL}api/posts?key=${config.REDUXBLOG_API_KEY}`
   );
 
   return {
@@ -26,7 +26,7 @@ function fetchPosts() {
 
 function createPost(post) {
   const request = axios.post(
-    `${config.REDUXBLOG_API_BASE_URL}/posts?key=${config.REDUXBLOG_API_KEY}`,
+    `${config.REDUXBLOG_API_BASE_URL}api/posts?key=${config.REDUXBLOG_API_KEY}`,
     post
   );
 
@@ -38,7 +38,7 @@ function createPost(post) {
 
 function deletePost(id) {
   const request = axios.delete(
-    `${config.REDUXBLOG_API_BASE_URL}/posts/${id}?key=${config.REDUXBLOG_API_KEY}`
+    `${config.REDUXBLOG_API_BASE_URL}api/posts/${id}?key=${config.REDUXBLOG_API_KEY}`
   );
 
   return {
